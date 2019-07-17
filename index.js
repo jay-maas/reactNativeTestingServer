@@ -147,12 +147,10 @@ const io = require('socket.io')(server);
 io.on('connection', client => {
     console.log('connect')
 
-     client.emit('test',
-        setInterval(()=> {
-            const hello = 'hello'
-            return hello
+    setInterval(()=> {
+            console.log('test')
+            client.emit('test', 'ohyeah')
         }, 1000)
-    )
 });
 
 server.listen(process.env.PORT);
