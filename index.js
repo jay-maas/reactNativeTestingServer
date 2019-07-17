@@ -150,4 +150,4 @@ io.on('connection', client => {
     client.emit('test', 'test')
 });
 
-server.listen(5000);
+server.listen(process.env.PORT);
