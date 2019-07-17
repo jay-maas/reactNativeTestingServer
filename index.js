@@ -12,8 +12,8 @@ io.on('connection', client => {
         }, 1000)
 });
 
-// server.listen(process.env.PORT);
-server.listen(5000);
+server.listen(process.env.PORT);
+// server.listen(5000);
 
 io.on('connection', socket => {
     console.log('user has connected')
