@@ -1,26 +1,26 @@
-const db = require('../../data/config/dbConfig.js')
+// const db = require('../../data/config/dbConfig.js')
 
-module.exports = {
-  insert,
-  getAll,
-  findBy
-}
+// module.exports = {
+//   insert,
+//   getAll,
+//   findBy
+// }
 
-function insert(data) {
-  return db('data')
-    .insert(data, 'id')
-    .then(ids => {
-      return db('data')
-        .where({ id: ids[0] })
-        .first()
-    })
-}
+// function insert(data) {
+//   return db('data')
+//     .insert(data, 'id')
+//     .then(ids => {
+//       return db('data')
+//         .where({ id: ids[0] })
+//         .first()
+//     })
+// }
 
-function getAll() {
-  return db('data')
-}
+// function getAll() {
+//   return db('data')
+// }
 
-function findBy(column, filter) {
-  return db('data')
-      .where({ [column]: filter})
-}
+// function findBy(column, filter) {
+//   return db('data')
+//       .where({ [column]: filter})
+// }
